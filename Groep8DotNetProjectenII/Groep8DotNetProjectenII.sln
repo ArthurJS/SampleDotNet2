@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Groep8DotNetProjectenII", "Groep8DotNetProjectenII\Groep8DotNetProjectenII.csproj", "{388F33D3-CD04-41F5-BA2D-E8AB41BC8389}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Groep8DotNetProjectenII.Tests", "Groep8DotNetProjectenII.Tests\Groep8DotNetProjectenII.Tests.csproj", "{9732049F-D525-4448-8A4B-FAFC6EC1BD27}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{388F33D3-CD04-41F5-BA2D-E8AB41BC8389}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{388F33D3-CD04-41F5-BA2D-E8AB41BC8389}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{388F33D3-CD04-41F5-BA2D-E8AB41BC8389}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{388F33D3-CD04-41F5-BA2D-E8AB41BC8389}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9732049F-D525-4448-8A4B-FAFC6EC1BD27}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9732049F-D525-4448-8A4B-FAFC6EC1BD27}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9732049F-D525-4448-8A4B-FAFC6EC1BD27}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9732049F-D525-4448-8A4B-FAFC6EC1BD27}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

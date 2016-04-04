@@ -1,0 +1,26 @@
+﻿@model Groep8DotNetProjectenII.ViewModels.KlimatogrammenIndexViewModel
+
+@using (Ajax.BeginForm("SelecteerLand", "Klimatogrammen", new AjaxOptions()
+{
+    UpdateTargetId = "landen",
+    InsertionMode = InsertionMode.Replace,
+    HttpMethod = "POST"
+}))
+{
+    <div class="form-group">
+        @Html.LabelFor(m => m.ContinentId, new { @class = "col-md-2 control-label" })
+        <div class="dropdown">
+            @Html.DropDownListFor(m => m.ContinentId, new SelectList(Model.Continenten, "ContinentId", "Naam"), "--selecteer werelddeel--", new { @class = "form-control" })
+        </div>
+    </div>
+}
+
+<script type="text/javascript">
+
+
+    $('#ContinentId').change(function () {
+        $("#weerstations select").empty();
+        $(this).parents('form').submit();
+    });
+
+</script>

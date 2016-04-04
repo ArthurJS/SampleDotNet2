@@ -1,0 +1,51 @@
+﻿@using Groep8DotNetProjectenII.ViewModels
+@model VragenViewModel
+@{
+    ViewBag.Title = "Index";
+}
+
+
+<style>
+    .form-horizontal .control-label{
+        text-align:left !important; 
+    }
+</style>
+
+<h2>Vragenlijst</h2>
+
+@using (Html.BeginForm("Controleer", "Vragen"))
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4>Gelieve eerst volgende vragen te beantwoorden</h4>
+        @Html.ActionLink("Terug naar selecteren klimatoram","Index","Klimatogrammen")
+        <hr/>
+        <div class="col-md-8">
+            @Html.Partial("_KlimatogramTonen", Model.Ktvm)
+        </div>
+        
+        @Html.HiddenFor(m => m.KlimatogramId)
+        @Html.ValidationSummary(false, "", new { @class = "text-danger" })
+        <div class="form-group" >
+
+            @for (int i = 0; i < Model.Pvm.Count(); i++)
+            {
+
+                @Html.Label(Model.Pvm.ElementAt(i).Vraag, htmlAttributes: new { @class = Model.Pvm[i].Correct || ViewContext.RouteData.GetRequiredString("action") == "Index" ? "control-label col-md-4 text-center" : "control-label col-md-4 text-danger" })
+
+                <div class="col-md-4">
+                    @Html.DropDownListFor(p => p.Pvm[i].Antwoord, Model.Pvm.ElementAt(i).MogelijkeAntwoorden, new { @class = "form-control" })
+                </div>
+
+                @Html.HiddenFor(p => p.Pvm[i].Vraag)
+            }
+
+            <div class="col-md-4" style="margin-top:10px;">
+                <input type="submit" value="Controleer" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+

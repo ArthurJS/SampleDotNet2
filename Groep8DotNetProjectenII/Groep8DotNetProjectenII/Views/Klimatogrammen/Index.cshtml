@@ -1,0 +1,26 @@
+﻿@using Groep8DotNetProjectenII.Models.Domain
+@model Groep8DotNetProjectenII.ViewModels.KlimatogrammenIndexViewModel
+
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Selecteer Klimatogram</h2>
+
+@Html.ActionLink("Terug naar selecteer leerjaar", "VerwijderSessie")
+
+<hr/>
+<div id="continenten">
+    @{ Html.RenderPartial("_ContinentSelecteren", Model);}
+</div>
+<div id="landen">
+    @{Html.RenderPartial("_LandSelecteren", Model);}
+</div>
+<div id="weerstations">
+    @{ Html.RenderPartial("_WeerstationSelecteren", Model); }
+</div>
+
+<div id="klimatogram">
+
+</div>

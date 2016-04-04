@@ -1,0 +1,74 @@
+﻿
+@using System.Activities.Statements
+@using System.Diagnostics.Eventing.Reader
+@model Groep8DotNetProjectenII.ViewModels.KlimatogramTonenViewModel
+@if(@Model.Chart != null){
+
+    if (Model.Selecteren)
+    {
+        <hr/>
+        @:<div class="jumbotron">
+    }
+        
+    <div>
+        @Model.Chart
+    </div>
+    <div class="table-responsive">
+        <table class="table text-right">
+            <thead>
+                <tr>
+                    <th class="text-right"></th>
+                    <th class="text-right">J</th>
+                    <th class="text-right">f</th>
+                    <th class="text-right">M</th>
+                    <th class="text-right">A</th>
+                    <th class="text-right">M</th>
+                    <th class="text-right">J</th>
+                    <th class="text-right">J</th>
+                    <th class="text-right">A</th>
+                    <th class="text-right">S</th>
+                    <th class="text-right">O</th>
+                    <th class="text-right">N</th>
+                    <th class="text-right">D</th>
+                    <th class="text-right">Jaar</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+
+                    <th>N (mm)</th>
+                    @foreach (int neerslag in Model.Neerslagen)
+                    {
+                        <td>@neerslag</td>
+                    }
+                    <td>@Model.SomJaarNeerslag</td>
+                </tr>
+                <tr>
+                    <th>T (°C)</th>
+                    @foreach (double temperaturen in Model.Temperaturen)
+                    {
+                        <td>@String.Format("{0:.0}", temperaturen)</td>
+                    }
+                    <td>@Model.GemiddeldeJaarTemperatuur</td>
+                </tr>
+            </tbody>
+        </table>
+        <p style="text-align: center">Klimatologische gemiddelden @Model.BeginJaar - @Model.EindJaar</p>
+
+    </div>
+    if (Model.Selecteren){
+        using(Html.BeginForm("Index", "Vragen", new{klimatogramId = Model.WeerstationId})){
+        
+            <div class="form-group">
+                <div class="col-md-11">
+                    <input type="submit" class="btn btn-primary" style="margin-bottom:10px;" value="Selecteer klimatogram"/>
+                </div>
+            </div>
+        }
+        @:</div>
+    }
+
+
+
+
+}

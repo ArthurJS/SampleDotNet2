@@ -1,0 +1,26 @@
+﻿@model Groep8DotNetProjectenII.ViewModels.ControleerVegetatieViewModel
+
+@if (@Model.Correct)
+{
+    <div class="alert alert-success">
+            Uw antwoord was correct! Proficiat !
+    </div>
+
+}
+else
+{
+
+    <div class="alert alert-danger">
+        Uw antwoord was fout, gelieve opnieuw te proberen
+        @if (@Model.Jaar == 4)
+        {
+            using (Ajax.BeginForm("HaalFotoOp", "Determineren", new AjaxOptions(){UpdateTargetId = "vegetatieImg"}))
+            {
+                @Html.HiddenFor(m => m.KlimatogramId)
+                <input type="submit" class="btn btn-default" value="Haal foto van vegetatie op"/>
+            }
+        }
+    </div>
+    
+}
+

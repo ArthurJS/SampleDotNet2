@@ -1,0 +1,239 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="Groep8DotNetProjectenII.Models.Domain.Continent">
+    <Position X="0.5" Y="4" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAEAAAAAAAAAAABABAAAQAACAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Domain\Continent.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Landen" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Groep8DotNetProjectenII.Models.Domain.Land">
+    <Position X="0.5" Y="0.5" Width="2" />
+    <AssociationLine Name="Locaties" Type="Groep8DotNetProjectenII.Models.Domain.Locatie" FixedFromPoint="true">
+      <Path>
+        <Point X="2.5" Y="1.513" />
+        <Point X="3.75" Y="1.513" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAABABABAQAAAAAAAAAAABAAAA=</HashCode>
+      <FileName>Models\Domain\Land.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Locaties" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Groep8DotNetProjectenII.Models.Domain.Maand">
+    <Position X="3.5" Y="4.25" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAAAAAAAAAAAAAAAAAAAAAIIABAACAAAAAAA=</HashCode>
+      <FileName>Models\Domain\Maand.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Groep8DotNetProjectenII.Models.Domain.Klimatogram">
+    <Position X="7" Y="0.5" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAADAAACAAIAAAAAAAAAACAAAAAgEAAAAgAAA=</HashCode>
+      <FileName>Models\Domain\Klimatogram.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Maanden" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Groep8DotNetProjectenII.Models.Domain.Locatie">
+    <Position X="3.75" Y="0.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAEAAAAAgAAAIBAAAgAQAAAAAAoAAAAAAEAA=</HashCode>
+      <FileName>Models\Domain\Locatie.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Klimatogram" />
+      <Property Name="Land" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Groep8DotNetProjectenII.Models.Domain.AantalDroog" Collapsed="true">
+    <Position X="11.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAIAAA=</HashCode>
+      <FileName>Models\Domain\AantalDroog.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Groep8DotNetProjectenII.Models.Domain.DeterminatieTabel">
+    <Position X="7.5" Y="4.5" Width="2.5" />
+    <AssociationLine Name="FirstNode" Type="Groep8DotNetProjectenII.Models.Domain.DeterminatieComponent">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.318" Y="0.393" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAABAAAAAAAAAABAAAAAAASAQAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Domain\DeterminatieTabel.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="FirstNode" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Groep8DotNetProjectenII.Models.Domain.NeerslagWinter" Collapsed="true">
+    <Position X="20.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAAAAAAAAAAAAAAEAAAAIAAAAAIAAAAAYAAA=</HashCode>
+      <FileName>Models\Domain\NeerslagWinter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Groep8DotNetProjectenII.Models.Domain.NeerslagZomer" Collapsed="true">
+    <Position X="25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAEAAQAIAAAAAIAEAAAIAAA=</HashCode>
+      <FileName>Models\Domain\NeerslagZomer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Groep8DotNetProjectenII.Models.Domain.TempKoudsteMaand" Collapsed="true">
+    <Position X="13.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAIAAA=</HashCode>
+      <FileName>Models\Domain\TempKoudsteMaand.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Groep8DotNetProjectenII.Models.Domain.TempWarmsteMaand" Collapsed="true">
+    <Position X="16" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAIAAA=</HashCode>
+      <FileName>Models\Domain\TempWarmsteMaand.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Groep8DotNetProjectenII.Models.Domain.TotNeerslagJaar" Collapsed="true">
+    <Position X="22.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Domain\TotNeerslagJaar.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DeterminerenTest.Models.Domein.Component">
+    <Position X="8" Y="9.25" Width="1.5" />
+    <AssociationLine Name="YesComponent" Type="Groep8DotNetProjectenII.Models.Domain.DeterminatieComponent" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="8.812" Y="9.25" />
+        <Point X="8.812" Y="8.438" />
+        <Point X="7.25" Y="8.438" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.157" Y="-0.362" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="NoComponent" Type="Groep8DotNetProjectenII.Models.Domain.DeterminatieComponent" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="8.938" Y="9.25" />
+        <Point X="8.938" Y="8.25" />
+        <Point X="7.25" Y="8.25" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="1.616" Y="0.124" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAQAEAAAAAAAAAAAAAAAARAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Domain\Component.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Vraag" />
+      <Property Name="YesComponent" />
+      <Property Name="NoComponent" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Groep8DotNetProjectenII.Models.Domain.DeterminatieComponent">
+    <Position X="5.75" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAAAAAAAAgAAAAAAAQAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Domain\DeterminatieComponent.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DeterminerenTest.Models.Domein.GemTempJaar" Collapsed="true">
+    <Position X="18.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Domain\GemTempJaar.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Groep8DotNetProjectenII.Models.Domain.Leaf">
+    <Position X="1.5" Y="8.75" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAIA=</HashCode>
+      <FileName>Models\Domain\Leaf.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DeterminerenTest.Models.Domein.Parameter">
+    <Position X="16.25" Y="3" Width="4" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgAAEAAAAAAgAAEAAAAAAAAAAAAAAAEIAAA=</HashCode>
+      <FileName>Models\Domain\Parameter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DeterminerenTest.Models.Domein.Vraag">
+    <Position X="11.5" Y="8.5" Width="1.5" />
+    <AssociationLine Name="Parameter" Type="DeterminerenTest.Models.Domein.Parameter" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="13" Y="8.843" />
+        <Point X="13.375" Y="8.843" />
+        <Point X="13.375" Y="4.25" />
+        <Point X="16.25" Y="4.25" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAEAAEIAAAAAAAAEAAAAAABAAAAQAAAAAAAAAAEAIAA=</HashCode>
+      <FileName>Models\Domain\Vraag.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Parameter" />
+      <Property Name="Operator" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Groep8DotNetProjectenII.Models.Domain.WarmsteMaand" Collapsed="true">
+    <Position X="23.75" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAIAAA=</HashCode>
+      <FileName>Models\Domain\WarmsteMaand.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Groep8DotNetProjectenII.Models.Domain.KoudsteMaand" Collapsed="true">
+    <Position X="27.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAIAAA=</HashCode>
+      <FileName>Models\Domain\KoudsteMaand.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Groep8DotNetProjectenII.Models.Domain.VragenLijst">
+    <Position X="20.5" Y="2.75" Width="4.25" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAAAAAAAAQAAAAAACAAAAAAAAABAAAAAABAA=</HashCode>
+      <FileName>Models\Domain\VragenLijst.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Vragen" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Enum Name="Groep8DotNetProjectenII.Models.Domain.Leerjaar">
+    <Position X="10.5" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAAAAAAAAAAAIAQAAAAAAAAAAAAAAQAAACACA=</HashCode>
+      <FileName>Models\Domain\Leerjaar.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Groep8DotNetProjectenII.Models.Domain.Maanden">
+    <Position X="13.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAQAAAAJAABAAAQAAAEAAAQAAAAAIAAAAAEAAA=</HashCode>
+      <FileName>Models\Domain\Maanden.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="DeterminerenTest.Models.Domein.VraagOperator">
+    <Position X="14.75" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAQBAACA=</HashCode>
+      <FileName>Models\Domain\VraagOperator.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

@@ -1,0 +1,39 @@
+﻿@model Groep8DotNetProjectenII.ViewModels.KlimatogrammenIndexViewModel
+
+@if (Model.Landen != null && Model.Landen.Count > 0)
+{
+
+    using (Ajax.BeginForm("SelecteerWeerstation", "Klimatogrammen", new AjaxOptions()
+    {
+        UpdateTargetId = "weerstations",
+    }))
+    {
+        <div class="form-group">
+            @Html.LabelFor(m => m.LandId, new { @class = "col-md-2 control-label" })
+            <div class="dropdown">
+                @Html.DropDownListFor(m => m.LandId, new SelectList(Model.Landen, "LandId", "Naam"), "--selecteer land--", new { @class = "form-control" })
+            </div>
+
+        </div>
+    }
+}
+
+else
+{
+   
+    <div class="form-group">
+        @Html.LabelFor(m => m.LandId, new { @class = "col-md-2 control-label" })
+        <div class="dropdown">
+
+            <select class="form-control"></select>
+
+        </div>
+
+    </div>
+}
+
+<script type="text/javascript">
+    $('#LandId').change(function () {
+        $(this).parents('form').submit();
+    });
+</script>  
